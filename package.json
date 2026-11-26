@@ -1,0 +1,32 @@
+{
+  "name": "emergency-fund-aquarium",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Emergency Fund Aquarium: a savings tracker where the tank fills as your emergency fund grows. Cloudflare Worker + D1.",
+  "license": "AGPL-3.0-only",
+  "author": "Jen Soltys",
+  "homepage": "https://emergencyfundaquarium.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jensoltys/emergencyfundaquarium.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jensoltys/emergencyfundaquarium/issues"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "4.156.0"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:setup:local": "wrangler d1 migrations apply emergency-fund-aquarium --local",
+    "db:setup:remote": "wrangler d1 migrations apply emergency-fund-aquarium --remote",
+    "test": "node --test --test-force-exit tests/*.test.mjs",
+    "test:security": "node scripts/test-security.mjs",
+    "predeploy": "node scripts/test-security.mjs"
+  }
+}

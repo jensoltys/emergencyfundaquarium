@@ -1,0 +1,40 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (C) 2026 the Emergency Fund Aquarium authors. See LICENSE.
+# Emergency Fund Aquarium: Cloudflare Worker + D1. See README.md for setup.
+name = "emergency-fund-aquarium"
+main = "src/worker.js"
+workers_dev = true
+compatibility_date = "2025-04-01"
+
+# Using your own domain? Uncomment and change:
+# routes = [ { pattern = "example.com", custom_domain = true } ]
+
+# not_found_handling = "404-page" serves public/404.html with a real 404 status.
+assets = { directory = "./public", binding = "ASSETS", run_worker_first = true, not_found_handling = "404-page" }
+
+[[d1_databases]]
+binding = "DB"
+database_name = "emergency-fund-aquarium"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"   # from: npx wrangler d1 create emergency-fund-aquarium
+
+# Workers Logs: keeps the one-line security events secLog() writes.
+[observability]
+enabled = true
+
+# Daily 04:30 UTC: purge expired rate-limit rows and week-old reset/verification tokens.
+[triggers]
+crons = ["30 4 * * *"]
+
+[vars]
+APP_NAME = "Emergency Fund Aquarium"
+APP_URL = "https://emergency-fund-aquarium.YOUR-SUBDOMAIN.workers.dev"
+FROM_EMAIL = "Emergency Fund Aquarium <noreply@example.com>"
+# Optional extras (blank = off):
+ALERT_WEBHOOK_URL = ""
+SIGNUP_WEBHOOK_URL = ""
+FEEDBACK_WEBHOOK_URL = ""
+# Everyone is on the free plan. Its cap (FREE_GOALS) is at the top of src/worker.js.
+
+# Secrets: set each with `npx wrangler secret put NAME`. See .dev.vars.example.
+# Required: JWT_SECRET, RESEND_API_KEY
+# Optional: ALERT_TOKEN, SIGNUP_WEBHOOK_SECRET

@@ -1,0 +1,152 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: AGPL-3.0-only | Copyright (C) 2026 the Emergency Fund Aquarium authors. See LICENSE. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Terms of Service &middot; Emergency Fund Aquarium</title>
+<meta name="description" content="Terms of Service for Emergency Fund Aquarium. Operated by YOUR COMPANY NAME."/>
+<meta name="robots" content="index,follow"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><rect width='80' height='80' rx='18' fill='%23A9D63A'/><rect x='13' y='15' width='54' height='52' rx='11' fill='%23FFFFFF'/><path d='M13 42h54v14a11 11 0 0 1-11 11H24a11 11 0 0 1-11-11V42Z' fill='%235CE1E6'/><path d='M46 53c0 5.2-4.7 8.6-9.9 8.6S26.2 58.2 26.2 53s4.7-8.6 9.9-8.6S46 47.8 46 53Z' fill='%23FFFFFF'/><path d='M46 53l8.6-6.2v12.4L46 53Z' fill='%23A9D63A'/><circle cx='33' cy='50.5' r='2.2' fill='%23EEF2F8'/><circle cx='52' cy='28' r='4.2' fill='%23CFF25A'/><circle cx='42' cy='22' r='2.7' fill='%23CFF25A'/></svg>"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#070A12;
+  --bg2:#0D1220;
+  --teal:#CFF25A;
+  --seafoam:#DDF78A;
+  --text:#EEF2F8;
+  --muted:#9AA3B8;
+  --card:rgba(23,30,48,.04);
+  --card-border:rgba(207,242,90,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);min-height:100vh;padding:2rem 1rem}
+.wrap{max-width:780px;margin:0 auto;background:var(--card);border:1px solid var(--card-border);border-radius:18px;padding:2rem 1.75rem;backdrop-filter:blur(20px)}
+h1{font-family:var(--font-head);font-size:2rem;background:linear-gradient(135deg,var(--teal),var(--seafoam));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.25rem}
+h2{font-family:var(--font-head);font-size:1.15rem;color:var(--seafoam);margin:1.6rem 0 .5rem}
+p,li{font-size:.95rem;line-height:1.7;color:var(--text);margin-bottom:.6rem}
+ul{margin:0 0 .8rem 1.25rem}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+.muted{color:var(--muted);font-size:.85rem}
+.entity{background:rgba(207,242,90,.08);border:1px solid var(--card-border);border-radius:12px;padding:1rem 1.25rem;margin:1rem 0;font-size:.9rem}
+
+/* ===== Brand lockup =====================================================
+   Mark B (filling tank) + stacked wordmark. Source of
+   truth: brand/preview.html. Geometry is hand-synced into public/404.html,
+   all four public/legal/*.html, and the favicon on every one of them — change
+   one, change them all. Fills are hardcoded hex on purpose: fill="var(--x)"
+   as a presentation attribute is unreliable.
+   Both parents here (.app-title, .auth-logo) use gradient text
+   (background-clip:text + transparent fill), which INHERITS into these spans
+   and paints them invisible — hence the resets on every text span. */
+.efa-brand{display:flex;width:max-content;align-items:center;gap:11px;text-decoration:none;padding:6px;margin:-6px}
+.efa-brand svg{display:block;flex:none}
+.efa-stack{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.efa-kicker{font-family:var(--font-body);font-weight:800;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted,#9AA3B8);-webkit-text-fill-color:currentColor;background:none}
+.efa-word{position:relative;display:inline-block;margin-top:4px;font-family:var(--font-head);font-weight:700;font-size:24px;line-height:1;letter-spacing:.2px;white-space:nowrap;color:var(--teal-d,#A9D63A);-webkit-text-fill-color:currentColor;background:none}
+.efa-swoosh{position:absolute;left:0;right:0;width:100%;height:.4em;bottom:-.26em;overflow:visible}
+.efa-brand:hover .efa-word{color:var(--teal-t,#DDF78A)}
+.efa-brand.lg .efa-kicker{font-size:13px}
+.efa-brand.lg .efa-word{font-size:34px}
+.efa-brand{margin:-6px -6px 1.1rem}
+.back{display:inline-block;margin-bottom:1.25rem;color:var(--muted);font-size:.85rem}
+</style>
+<style id="brand-fonts">:root{--font-head:'Bricolage Grotesque','Avenir Next',system-ui,sans-serif;--font-body:'Figtree','Avenir Next',system-ui,sans-serif;--on-primary:#1C2604}button,input,select,textarea{font-family:inherit}.bg-blob{mix-blend-mode:screen!important}html,body{color-scheme:dark}input,select,textarea{color:#EEF2F8;background:rgba(23,30,48,.6)}</style>
+</head>
+<body>
+<main class="wrap">
+<a class="efa-brand" href="/" aria-label="Emergency Fund Aquarium home"><svg width="28" height="28" viewBox="0 0 80 80" aria-hidden="true" focusable="false"><rect x="6" y="6" width="68" height="68" rx="20" fill="#A9D63A"/><rect x="18" y="20" width="44" height="42" rx="9" fill="#FFFFFF"/><path d="M18 40h44v13a9 9 0 0 1-9 9H27a9 9 0 0 1-9-9V40Z" fill="#5CE1E6"/><path d="M44 50c0 4.2-3.8 7-8 7s-8-2.8-8-7 3.8-7 8-7 8 2.8 8 7Z" fill="#FFFFFF"/><path d="M44 50l7-5v10l-7-5Z" fill="#A9D63A"/><circle cx="34" cy="48" r="1.8" fill="#EEF2F8"/><circle cx="50" cy="30" r="3.4" fill="#CFF25A"/><circle cx="42" cy="25" r="2.2" fill="#CFF25A"/></svg><span class="efa-stack"><span class="efa-kicker">Emergency Fund</span><span class="efa-word">Aquarium<svg class="efa-swoosh" viewBox="0 0 92 14" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M4 9C24 4 60 4 88 8" stroke="#5CE1E6" stroke-width="6" stroke-linecap="round" fill="none"/></svg></span></span></a>
+<a class="back" href="/">&larr; Back to Aquarium</a>
+<h1>Terms of Service</h1>
+<p class="muted">Last updated: 2026-05-28</p>
+
+<div class="entity">
+<strong>Operator:</strong> YOUR COMPANY NAME.<br>
+<strong>Mailing address:</strong> YOUR BUSINESS ADDRESS.<br>
+<strong>Notices and service of process:</strong> <a href="mailto:support@example.com">support@example.com</a>
+</div>
+
+<p>These Terms of Service ("Terms") are a binding agreement between you and YOUR COMPANY NAME ("we," "us," "Emergency Fund Aquarium") and govern your use of Emergency Fund Aquarium, including the website, software, account features, and any related services (the "Service"). By creating an account or otherwise using the Service, you confirm that you have read, understood, and agreed to these Terms. If you do not agree, do not use the Service.</p>
+
+<h2>1. The Service</h2>
+<p>Emergency Fund Aquarium is a gamified savings tracker. You set a savings goal, log deposits over time, and watch a virtual aquarium grow as your fund grows. This site runs the free plan. Specific features and limits are shown in the Service and may change over time.</p>
+
+<h2>2. Eligibility</h2>
+<p>You must be at least 18 years old to create an account. By using the Service, you represent that you meet these requirements and have the legal authority to enter into this agreement. The Service is offered only where lawful.</p>
+
+<h2>3. Accounts</h2>
+<p>You must create an account with a valid email address and a password of at least ten characters and no more than two hundred characters. You are responsible for keeping your credentials confidential and for all activity under your account. Notify us at <a href="mailto:support@example.com">support@example.com</a> if you suspect unauthorized access. We may suspend or terminate accounts that show signs of compromise, abuse, or fraud.</p>
+
+<h2>4. Paid plans</h2>
+<p>This site has no paid plan and takes no payments. (EDIT THIS SECTION if you add one.)</p>
+
+<h2>5. Not financial advice</h2>
+<p><strong>Important. Please read carefully.</strong> Emergency Fund Aquarium is a savings tracking tool. The numbers, projections, and "months to go" estimates it shows are based purely on the deposits you enter. They are not financial advice, not budgeting advice, and not a recommendation to take any particular financial action. Any decision you make about saving, spending, or holding funds is your own. We do not have access to your bank account; we do not move money; we do not provide brokerage, banking, or advisory services.</p>
+<p>Some links inside the Service may be affiliate links. Affiliate links are labeled. If you click and sign up, we may earn a small commission at no cost to you. The presence of a link is not an endorsement of suitability for your situation.</p>
+
+<h2>6. Acceptable use</h2>
+<p>You agree not to use the Service to:</p>
+<ul>
+  <li>Submit content you do not have the right to submit, or that is unlawful, defamatory, harassing, or hateful.</li>
+  <li>Impersonate another person or commit fraud.</li>
+  <li>Scrape the Service or other people's data through it.</li>
+  <li>Send malware, run automated requests outside any documented API, circumvent rate limits, or place undue load on our systems.</li>
+  <li>Use the Service to violate the terms of any third party we rely on, including Cloudflare and Resend.</li>
+</ul>
+<p>We may suspend, throttle, or terminate access for any actual or suspected violation, with or without notice.</p>
+
+<h2>7. Your content</h2>
+<p>You retain ownership of any content you submit ("Your Content"). You grant us a worldwide, non-exclusive, royalty-free license to host, transmit, process, and display Your Content back to you solely for the purpose of operating the Service for you. You represent that submitting Your Content does not violate any law or third-party right.</p>
+
+<h2>8. Our intellectual property</h2>
+<p>The software that runs the Service is open source under the GNU Affero General Public License v3.0 (AGPL-3.0), at <a href="https://github.com/jensoltys/emergencyfundaquarium" target="_blank" rel="noopener noreferrer">https://github.com/jensoltys/emergencyfundaquarium</a>, and that license, not these Terms, covers what you can do with the code. Our own name, logo and the content we add are owned by YOUR COMPANY NAME or our licensors. We grant you a limited, revocable, non-transferable license to use the hosted Service for your personal use.</p>
+
+<h2>9. Privacy</h2>
+<p>Our handling of personal information is described in our <a href="/legal/privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference. You acknowledge that the Service requires us to process the data you submit and that we cannot operate the Service without that processing.</p>
+
+<h2>10. Service availability and changes</h2>
+<p>We do not guarantee any specific level of uptime, performance, or feature continuity. The Service may be unavailable for maintenance, updates, third-party outages, force majeure, or any other reason, and may be modified or discontinued at any time. We are not liable for any loss or damage that results from any such unavailability or change.</p>
+
+<h2>11. Disclaimer of warranties</h2>
+<p>The Service is provided "AS IS" and "AS AVAILABLE", without warranties of any kind, whether express, implied, statutory, or otherwise. To the maximum extent permitted by law, we disclaim all warranties, including the implied warranties of merchantability, fitness for a particular purpose, title, non-infringement, accuracy, and any warranty arising from course of dealing or usage of trade. We do not warrant that the Service will meet your needs, that any savings outcome will result, that defects will be corrected, or that the Service will be secure or free of viruses or harmful components.</p>
+
+<h2>12. Limitation of liability</h2>
+<p>To the maximum extent permitted by law, in no event will YOUR COMPANY NAME, its members, employees, or contractors be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for any loss of profits, revenue, data, business, savings, or financial outcome, arising out of or relating to these Terms or your use of the Service, even if we have been advised of the possibility of such damages and even if a remedy fails of its essential purpose.</p>
+<p>Our total cumulative liability arising out of or relating to these Terms or the Service, regardless of the form of action, will not exceed one hundred U.S. dollars ($100). Some jurisdictions do not allow the exclusion or limitation of certain damages, so some of these limits may not apply to you. In that case, our liability will be limited to the smallest extent permitted by applicable law.</p>
+
+<h2>13. Indemnification</h2>
+<p>You will indemnify, defend, and hold harmless YOUR COMPANY NAME and its members, agents, contractors, and service providers from and against any claims, demands, losses, damages, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or related to (a) Your Content, (b) your use or misuse of the Service, (c) your violation of these Terms or any law, and (d) your violation of the rights of any third party.</p>
+
+<h2>14. Termination</h2>
+<p>You may stop using the Service at any time and may delete your account from Account settings in the footer. We may suspend or terminate your account or access to the Service at any time, with or without notice, for any reason, including suspected violation of these Terms or risk of harm to us or our users. On termination, your right to use the Service ends immediately. Sections that by their nature should survive termination will survive, including sections on Your Content, intellectual property, disclaimers, limits of liability, indemnification, and dispute resolution.</p>
+
+<h2>15. Governing law and disputes</h2>
+<p>These Terms are governed by and construed under the laws of the State of YOUR STATE, USA, without regard to its conflict of laws rules. The United Nations Convention on Contracts for the International Sale of Goods does not apply.</p>
+<p>You and we agree to first attempt to resolve any dispute informally by contacting <a href="mailto:support@example.com">support@example.com</a> with a written description of the dispute and a proposed resolution. If we cannot resolve the dispute within sixty (60) days, the dispute will be resolved exclusively in the state or federal courts located in YOUR COUNTY, YOUR STATE, and you and we consent to the personal jurisdiction and venue of those courts. To the extent permitted by law, you and we each waive any right to a jury trial and any right to participate in a class action or representative proceeding.</p>
+
+<h2>16. Changes to these Terms</h2>
+<p>We may update these Terms from time to time. The "Last updated" date at the top will reflect the most recent change. For material changes, we will make reasonable efforts to provide notice, such as by email or by a notice on the Service, before the changes take effect. Your continued use of the Service after the effective date of the changes is your acceptance of the updated Terms.</p>
+
+<h2>17. General</h2>
+<p>If any provision of these Terms is held unenforceable, that provision will be modified to the minimum extent necessary to make it enforceable, and the remaining provisions will stay in full force. Our failure to enforce a provision is not a waiver of our right to do so later. You may not assign these Terms without our written consent. We may assign these Terms in connection with a merger, acquisition, or sale of assets. These Terms are the entire agreement between you and us about the Service and replace any prior agreement on the same subject.</p>
+
+<h2>18. Contact</h2>
+<p>Questions, notices, or service of process:</p>
+<p>
+YOUR COMPANY NAME<br>
+YOUR BUSINESS ADDRESS<br>
+USA<br>
+<a href="mailto:support@example.com">support@example.com</a>
+</p>
+
+<footer style="margin-top:2rem;font-size:.85rem">
+<p><a href="/legal/privacy.html">Privacy</a> &middot; <a href="/legal/terms.html">Terms</a> &middot; <a href="/legal/accessibility.html">Accessibility</a> &middot; <a href="/legal/do-not-sell.html">Do Not Sell or Share My Info</a> &middot; <a href="https://github.com/jensoltys/emergencyfundaquarium" target="_blank" rel="noopener noreferrer">Source code</a></p>
+<p>Contact <a href="mailto:support@example.com">support@example.com</a> &middot; &copy; <span class="jbi-year">2026</span> YOUR COMPANY NAME &middot; YOUR BUSINESS ADDRESS</p>
+</footer>
+</main>
+<script src="/footer-year.js" defer></script>
+</body>
+</html>

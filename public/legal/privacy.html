@@ -1,0 +1,168 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: AGPL-3.0-only | Copyright (C) 2026 the Emergency Fund Aquarium authors. See LICENSE. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Privacy Policy &middot; Emergency Fund Aquarium</title>
+<meta name="description" content="Privacy policy for Emergency Fund Aquarium. Operated by YOUR COMPANY NAME."/>
+<meta name="robots" content="index,follow"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><rect width='80' height='80' rx='18' fill='%23A9D63A'/><rect x='13' y='15' width='54' height='52' rx='11' fill='%23FFFFFF'/><path d='M13 42h54v14a11 11 0 0 1-11 11H24a11 11 0 0 1-11-11V42Z' fill='%235CE1E6'/><path d='M46 53c0 5.2-4.7 8.6-9.9 8.6S26.2 58.2 26.2 53s4.7-8.6 9.9-8.6S46 47.8 46 53Z' fill='%23FFFFFF'/><path d='M46 53l8.6-6.2v12.4L46 53Z' fill='%23A9D63A'/><circle cx='33' cy='50.5' r='2.2' fill='%23EEF2F8'/><circle cx='52' cy='28' r='4.2' fill='%23CFF25A'/><circle cx='42' cy='22' r='2.7' fill='%23CFF25A'/></svg>"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#070A12;
+  --bg2:#0D1220;
+  --teal:#CFF25A;
+  --seafoam:#DDF78A;
+  --gold:#FFC857;
+  --text:#EEF2F8;
+  --muted:#9AA3B8;
+  --card:rgba(23,30,48,.04);
+  --card-border:rgba(207,242,90,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);min-height:100vh;padding:2rem 1rem}
+.wrap{max-width:780px;margin:0 auto;background:var(--card);border:1px solid var(--card-border);border-radius:18px;padding:2rem 1.75rem;backdrop-filter:blur(20px)}
+h1{font-family:var(--font-head);font-size:2rem;background:linear-gradient(135deg,var(--teal),var(--seafoam));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.25rem}
+h2{font-family:var(--font-head);font-size:1.15rem;color:var(--seafoam);margin:1.6rem 0 .5rem}
+p,li{font-size:.95rem;line-height:1.7;color:var(--text);margin-bottom:.6rem}
+ul{margin:0 0 .8rem 1.25rem}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+.muted{color:var(--muted);font-size:.85rem}
+.entity{background:rgba(207,242,90,.08);border:1px solid var(--card-border);border-radius:12px;padding:1rem 1.25rem;margin:1rem 0;font-size:.9rem}
+
+/* ===== Brand lockup =====================================================
+   Mark B (filling tank) + stacked wordmark. Source of
+   truth: brand/preview.html. Geometry is hand-synced into public/404.html,
+   all four public/legal/*.html, and the favicon on every one of them — change
+   one, change them all. Fills are hardcoded hex on purpose: fill="var(--x)"
+   as a presentation attribute is unreliable.
+   Both parents here (.app-title, .auth-logo) use gradient text
+   (background-clip:text + transparent fill), which INHERITS into these spans
+   and paints them invisible — hence the resets on every text span. */
+.efa-brand{display:flex;width:max-content;align-items:center;gap:11px;text-decoration:none;padding:6px;margin:-6px}
+.efa-brand svg{display:block;flex:none}
+.efa-stack{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.efa-kicker{font-family:var(--font-body);font-weight:800;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted,#9AA3B8);-webkit-text-fill-color:currentColor;background:none}
+.efa-word{position:relative;display:inline-block;margin-top:4px;font-family:var(--font-head);font-weight:700;font-size:24px;line-height:1;letter-spacing:.2px;white-space:nowrap;color:var(--teal-d,#A9D63A);-webkit-text-fill-color:currentColor;background:none}
+.efa-swoosh{position:absolute;left:0;right:0;width:100%;height:.4em;bottom:-.26em;overflow:visible}
+.efa-brand:hover .efa-word{color:var(--teal-t,#DDF78A)}
+.efa-brand.lg .efa-kicker{font-size:13px}
+.efa-brand.lg .efa-word{font-size:34px}
+.efa-brand{margin:-6px -6px 1.1rem}
+.back{display:inline-block;margin-bottom:1.25rem;color:var(--muted);font-size:.85rem}
+</style>
+<style id="brand-fonts">:root{--font-head:'Bricolage Grotesque','Avenir Next',system-ui,sans-serif;--font-body:'Figtree','Avenir Next',system-ui,sans-serif;--on-primary:#1C2604}button,input,select,textarea{font-family:inherit}.bg-blob{mix-blend-mode:screen!important}html,body{color-scheme:dark}input,select,textarea{color:#EEF2F8;background:rgba(23,30,48,.6)}</style>
+</head>
+<body>
+<main class="wrap">
+<a class="efa-brand" href="/" aria-label="Emergency Fund Aquarium home"><svg width="28" height="28" viewBox="0 0 80 80" aria-hidden="true" focusable="false"><rect x="6" y="6" width="68" height="68" rx="20" fill="#A9D63A"/><rect x="18" y="20" width="44" height="42" rx="9" fill="#FFFFFF"/><path d="M18 40h44v13a9 9 0 0 1-9 9H27a9 9 0 0 1-9-9V40Z" fill="#5CE1E6"/><path d="M44 50c0 4.2-3.8 7-8 7s-8-2.8-8-7 3.8-7 8-7 8 2.8 8 7Z" fill="#FFFFFF"/><path d="M44 50l7-5v10l-7-5Z" fill="#A9D63A"/><circle cx="34" cy="48" r="1.8" fill="#EEF2F8"/><circle cx="50" cy="30" r="3.4" fill="#CFF25A"/><circle cx="42" cy="25" r="2.2" fill="#CFF25A"/></svg><span class="efa-stack"><span class="efa-kicker">Emergency Fund</span><span class="efa-word">Aquarium<svg class="efa-swoosh" viewBox="0 0 92 14" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M4 9C24 4 60 4 88 8" stroke="#5CE1E6" stroke-width="6" stroke-linecap="round" fill="none"/></svg></span></span></a>
+<a class="back" href="/">&larr; Back to Aquarium</a>
+<h1>Privacy Policy</h1>
+<p class="muted">Last updated: November 20, 2026</p>
+
+<div class="entity">
+<strong>Operator:</strong> YOUR COMPANY NAME.<br>
+<strong>Mailing address:</strong> YOUR BUSINESS ADDRESS.<br>
+<strong>Privacy contact:</strong> <a href="mailto:privacy@example.com">privacy@example.com</a><br>
+<strong>General support:</strong> <a href="mailto:support@example.com">support@example.com</a>
+</div>
+
+<p>This policy explains what data we collect when you use Emergency Fund Aquarium (the "Service"), why we collect it, who we share it with, and what choices you have. Throughout this policy, "we," "us," and "our" refer to YOUR COMPANY NAME.</p>
+
+<h2>1. What we collect</h2>
+<ul>
+  <li><strong>Account data.</strong> Your email address and a salted PBKDF2 hash of your password (100,000 iterations, 16-byte random salt, SHA-256). We never store your password in plain text and never see it again after you set it.</li>
+  <li><strong>Savings data.</strong> The goals you create (name, target amount, date), the deposits you record (amount, date, optional note), the aquarium theme you choose for each goal, and the milestones and fish-dex creatures you collect. All of this is visible only to you when you're logged in.</li>
+  <li><strong>Account preferences.</strong> Your selected currency.</li>
+  <li><strong>Security data.</strong> A bounded record of failed login attempts and rate-limit counters, keyed by a one-way hash of your IP address or by your email, used solely to throttle abuse. Reset and email-verification tokens are stored as SHA-256 hashes so a database snapshot leak cannot directly compromise pending resets.</li>
+  <li><strong>Security log.</strong> When someone logs in, fails to log in, changes or resets a password, or deletes an account, we write one line to our server log with the event type, your user ID or a one-way hash of your email, and a one-way hash of the IP address. It never holds your password, your login token, your raw email or your raw IP address.</li>
+  <li><strong>Newsletter consent.</strong> Emergency Fund Aquarium doesn't offer a newsletter. Your account record has a newsletter-consent field that stays off, and nothing in the Service turns it on.</li>
+</ul>
+
+<h2>2. Why we collect it</h2>
+<ul>
+  <li>To create and secure your account (legal basis: contract).</li>
+  <li>To store the goals and deposits you ask us to store (legal basis: contract).</li>
+  <li>To prevent brute-force login, credential stuffing, and abuse (legal basis: legitimate interest).</li>
+  <li>To send you transactional emails (verification, password reset) (legal basis: contract).</li>
+</ul>
+
+<h2 id="processors">3. Who we share it with (processors)</h2>
+<p>We use a small set of vendors to operate the Service. Each vendor only receives the minimum data they need.</p>
+<ul>
+  <li><strong>Cloudflare</strong> hosts the Service and our database (Cloudflare Workers + D1).</li>
+  <li><strong>Resend</strong> sends transactional emails (verification, password reset).</li>
+  <li><strong>Feedback button</strong> (only if this site turns it on): if you use the in-app Feedback button, your message, the page you were on, your browser's user-agent string and, if you choose to enter it, your email address are sent to this site's feedback webhook. Nothing is sent unless you press Send.</li>
+  <li><strong>Cloudflare Web Analytics</strong>, if this site turns it on, counts page views. Cloudflare says it doesn't use cookies or local storage for this and doesn't fingerprint visitors.</li>
+  <li><strong>Google Fonts.</strong> Our pages load fonts from Google (fonts.googleapis.com and fonts.gstatic.com), which sends your IP address and browser details to Google when the page loads.</li>
+</ul>
+<p>We do not sell your personal data. We do not share your data with advertisers. We do not transfer your data to third parties for their own marketing.</p>
+
+<h2>4. How long we keep your data</h2>
+<ul>
+  <li>Account, goals, deposits, and unlocked milestones and creatures: as long as your account exists. When you delete your account (Account settings in the footer, then Delete my account), we delete every row tied to your user ID (users, goals, deposits, achievements, reset tokens, email-verification tokens) right away, and it can't be undone.</li>
+  <li>Security data (failed-login counters, rate-limit rows): deleted once they expire (15 minutes for failed-login records, and from 1 minute up to 24 hours for other rate-limit rows, depending on the limit). Expired rows are cleared the next time a limit is checked, and a daily cleanup job deletes any that are left, plus used or expired reset and verification tokens once they're 7 days past expiry.</li>
+  <li>Security log lines: kept by Cloudflare's Workers Logs for 3 to 7 days, depending on our Cloudflare plan, then deleted.</li>
+</ul>
+
+<h2>5. Cookies and local storage</h2>
+<p>To keep you logged in, we set one cookie named <code>efa_session</code>. It holds a signed login token, it's marked HttpOnly so scripts on the page can't read it, it's only sent to Emergency Fund Aquarium over HTTPS, and it lasts 30 days or until you log out, whichever comes first. We don't keep your login in browser local storage anymore.</p>
+<p>Emergency Fund Aquarium also saves these items in your browser's localStorage, and each one is needed for the part of the Service it belongs to:</p>
+<ul>
+  <li><code>efa_milestones_</code> plus a goal ID: the milestones you've already celebrated on that goal, so a celebration doesn't replay.</li>
+  <li><code>efa_biome_</code> plus a goal ID: the theme an older version of the app saved in your browser. The app copies it to your account once and then only removes it.</li>
+  <li><code>efa_onboard</code> and <code>efa_tour_done</code>: remember that you've seen the welcome screen and the guided tour.</li>
+  <li><code>efa_guest_goal</code>: the fund name, target amount and theme you pick on the home page's "Build your tank first" screen before you have an account. It stays on your device only. It moves into your account when you sign up or log in, and it's deleted then, when you log out, or after 30 days.</li>
+  <li><code>efa_guest_draft</code>: what you've typed on that same screen before you press Build my tank, kept in this browser tab's sessionStorage so going back from another page doesn't wipe it. It's gone when you close the tab.</li>
+</ul>
+<p>We don't use advertising cookies or tracking pixels.</p>
+
+<h2>6. Do Not Track</h2>
+<p>Some browsers can send a "Do Not Track" signal. Emergency Fund Aquarium doesn't use advertising or tracking tools that follow you across other websites, so it works the same whether or not your browser sends that signal. We don't let any third party collect information about your activity on Emergency Fund Aquarium to track you across other sites over time.</p>
+
+<h2>7. Your rights</h2>
+<p>Depending on where you live (GDPR, UK GDPR, CCPA/CPRA, and similar laws), you may have the right to:</p>
+<ul>
+  <li><strong>Access</strong> the personal data we hold about you. Use the <strong>Download my data (JSON)</strong> button on the Progress tab, or <strong>Export my data</strong> under <strong>Account settings</strong> in the footer, to export every record tied to your account.</li>
+  <li><strong>Correct</strong> inaccurate data (edit your goals or deposits, or email us to change your email address).</li>
+  <li><strong>Delete</strong> your account and all your data (<strong>Account settings</strong> in the footer &rarr; <strong>Delete my account</strong>). Deletion is immediate and we cannot undo it.</li>
+  <li><strong>Lodge a complaint</strong> with your local data protection authority.</li>
+</ul>
+<p>For anything that requires our help (CCPA right-to-know, GDPR Article 15 statement, dispute over a deletion), email <a href="mailto:privacy@example.com">privacy@example.com</a> from the address tied to your account. We respond within 30 days (45 days for California requests).</p>
+
+<h2>8. Security</h2>
+<p>We protect your data using TLS in transit (HSTS), salted PBKDF2 password hashing, parameterized SQL with per-user row filtering, signed JWT sessions with revocation, account lockout after repeated failed logins, request body size caps, per-IP and per-account rate limiting, and a strict Content Security Policy. No system is perfectly secure, but if we detect a breach affecting your data we will notify you and the appropriate authorities as required by law.</p>
+
+<h2>9. Children</h2>
+<p>The Service isn't meant for anyone under 18, and we don't knowingly collect personal data from them. If you believe a child has created an account, email <a href="mailto:privacy@example.com">privacy@example.com</a> and we will delete it.</p>
+
+<h2>10. International users</h2>
+<p>The Service is operated from the United States. By using the Service from outside the US, you consent to the transfer of your data to the US. We rely on Standard Contractual Clauses or equivalent safeguards with our sub-processors where required.</p>
+
+<h2>11. California residents</h2>
+<p>If you're a California resident, you have the rights described in Section 7 above (right to know, delete, correct) under the CCPA/CPRA. You also have the right to opt out of the sale or sharing of your personal information. We don't sell or share personal information for cross-context behavioral advertising. See our <a href="/legal/do-not-sell.html">Do Not Sell or Share My Personal Information</a> page for the formal statement.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>If we update this policy in a way that materially changes how we handle your data, we will notify you by email and post a notice on the Service. The "Last updated" date at the top will always reflect the current version.</p>
+
+<h2>13. Contact</h2>
+<p>Questions about this policy or your data:</p>
+<p>
+YOUR COMPANY NAME<br>
+YOUR BUSINESS ADDRESS<br>
+USA<br>
+<a href="mailto:privacy@example.com">privacy@example.com</a>
+</p>
+
+<footer style="margin-top:2rem;font-size:.85rem">
+<p><a href="/legal/privacy.html">Privacy</a> &middot; <a href="/legal/terms.html">Terms</a> &middot; <a href="/legal/accessibility.html">Accessibility</a> &middot; <a href="/legal/do-not-sell.html">Do Not Sell or Share My Info</a> &middot; <a href="https://github.com/jensoltys/emergencyfundaquarium" target="_blank" rel="noopener noreferrer">Source code</a></p>
+<p>Contact <a href="mailto:support@example.com">support@example.com</a> &middot; &copy; <span class="jbi-year">2026</span> YOUR COMPANY NAME &middot; YOUR BUSINESS ADDRESS</p>
+</footer>
+</main>
+<script src="/footer-year.js" defer></script>
+</body>
+</html>

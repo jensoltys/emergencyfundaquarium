@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: AGPL-3.0-only | Copyright (C) 2026 the Emergency Fund Aquarium authors. See LICENSE. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to use Emergency Fund Aquarium</title>
+<meta name="description" content="The whole app explained in plain words: setting a goal, logging a deposit, how creatures arrive as the tank fills, the Fish-Dex, biomes, and what free covers versus Pro.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><rect width='80' height='80' rx='18' fill='%23A9D63A'/><rect x='13' y='15' width='54' height='52' rx='11' fill='%23FFFFFF'/><path d='M13 42h54v14a11 11 0 0 1-11 11H24a11 11 0 0 1-11-11V42Z' fill='%235CE1E6'/><path d='M46 53c0 5.2-4.7 8.6-9.9 8.6S26.2 58.2 26.2 53s4.7-8.6 9.9-8.6S46 47.8 46 53Z' fill='%23FFFFFF'/><path d='M46 53l8.6-6.2v12.4L46 53Z' fill='%23A9D63A'/><circle cx='33' cy='50.5' r='2.2' fill='%23EEF2F8'/><circle cx='52' cy='28' r='4.2' fill='%23CFF25A'/><circle cx='42' cy='22' r='2.7' fill='%23CFF25A'/></svg>">
+<meta property="og:title" content="How to use Emergency Fund Aquarium">
+<meta property="og:description" content="The whole app explained in plain words. Ten minutes from what is this to I've got it.">
+<meta property="og:image" content="/og.png">
+<meta property="og:url" content="/guide">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070A12;--bg2:#0D1220;
+  --teal:#CFF25A;--teal-d:#A9D63A;--teal-t:#DDF78A;--teal-text:#DDF78A;
+  --coral:#FF8A5C;--gold:#FFC857;--seafoam:#5CE1E6;--purple:#B69CFF;--cyan:#CFF25A;
+  --text:#EEF2F8;--muted:#9AA3B8;
+  --card:rgba(23,30,48,0.6);--card-border:rgba(169,214,58,0.16);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--font-body);font-size:1rem;line-height:1.65;
+  background-image:radial-gradient(ellipse at 15% -10%,rgba(207,242,90,.30),transparent 55%),
+                   radial-gradient(ellipse at 92% 6%,rgba(92,225,230,.22),transparent 50%);
+  background-repeat:no-repeat;
+}
+a{color:var(--teal-text)}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--teal-d);outline-offset:2px}
+img{max-width:100%;height:auto}
+
+.topbar{border-bottom:1px solid var(--card-border);background:rgba(7,10,18,.85);backdrop-filter:blur(8px);
+  position:sticky;top:0;z-index:10}
+.topbar .in{max-width:820px;margin:0 auto;padding:.7rem 1.1rem;display:flex;align-items:center;gap:1rem}
+.brand{display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;color:inherit}
+.brand svg{flex-shrink:0}
+.brand .word{font-family:var(--font-head);font-size:1.02rem;line-height:1;color:var(--text)}
+.brand .word em{font-style:normal;color:var(--teal-d)}
+.cta{margin-left:auto;display:inline-block;background:linear-gradient(135deg,var(--teal),var(--seafoam));
+  color:#FFFFFF;text-decoration:none;font-weight:800;padding:.5rem 1rem;border-radius:999px;font-size:.9rem;white-space:nowrap}
+
+main{max-width:820px;margin:0 auto;padding:2.2rem 1.1rem 3rem}
+h1{font-family:var(--font-head);font-size:clamp(1.8rem,5.2vw,2.7rem);line-height:1.12;margin:0 0 .5rem;color:var(--text)}
+h1 em{font-style:normal;color:var(--teal-d)}
+.lead{font-size:1.1rem;color:var(--muted);margin:0 0 2rem}
+h2{font-family:var(--font-head);font-size:1.45rem;margin:2.6rem 0 .7rem;color:var(--text);scroll-margin-top:70px}
+h3{font-family:var(--font-head);font-size:1.05rem;margin:1.6rem 0 .4rem;color:var(--teal-text)}
+p{margin:.7rem 0}
+ul,ol{padding-left:1.3rem;margin:.7rem 0}
+li{margin:.45rem 0}
+b,strong{color:#EEF2F8}
+
+.shot{display:block;width:100%;border-radius:14px;border:1px solid var(--card-border);
+  box-shadow:0 14px 40px rgba(169,214,58,.20);margin:1.2rem 0 .5rem;background:#FFFFFF}
+.cap{font-size:.85rem;color:var(--muted);margin:0 0 1.6rem;font-style:italic}
+
+.strow{display:flex;gap:.7rem;align-items:baseline;margin:.5rem 0}
+.chip{flex-shrink:0;display:inline-block;font-weight:800;font-size:.72rem;letter-spacing:.03em;
+  text-transform:uppercase;padding:.2rem .6rem;border-radius:999px;border:1px solid currentColor}
+.c-teal{color:var(--teal-text)} .c-sea{color:#5CE1E6} .c-gold{color:#FFC857}
+
+.callout{background:var(--card);border:1px solid var(--card-border);border-left:3px solid var(--teal);
+  border-radius:12px;padding:.9rem 1.1rem;margin:1.4rem 0;font-size:.95rem}
+
+.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.tablewrap{overflow-x:auto;margin:1.1rem 0}
+.tablewrap:focus-visible{outline:3px solid var(--teal-d);outline-offset:3px}
+table{border-collapse:collapse;width:100%;min-width:420px;font-size:.92rem}
+th,td{text-align:left;padding:.55rem .7rem;border-bottom:1px solid var(--card-border);vertical-align:top}
+th{font-family:var(--font-head);font-weight:700;color:var(--teal-text);font-size:.9rem}
+
+.faq dt{font-weight:800;color:#EEF2F8;margin-top:1.1rem}
+.faq dd{margin:.25rem 0 0;color:var(--text)}
+
+.bigcta{text-align:center;margin:3rem 0 1rem}
+.bigcta .cta{margin:0;font-size:1.05rem;padding:.8rem 1.8rem;max-width:100%;white-space:normal;text-align:center}
+
+.footer{border-top:1px solid var(--card-border);margin-top:2.5rem;padding:1.6rem 1.1rem 2.5rem;
+  text-align:center;font-size:.82rem;color:var(--muted)}
+.footer a{color:var(--muted)}
+.footer .legalrow{margin-bottom:.5rem;line-height:2}
+.footer .legalrow a{margin:0 .35rem}
+</style>
+<style id="brand-fonts">:root{--font-head:'Bricolage Grotesque','Avenir Next',system-ui,sans-serif;--font-body:'Figtree','Avenir Next',system-ui,sans-serif;--on-primary:#1C2604}button,input,select,textarea{font-family:inherit}.bg-blob{mix-blend-mode:screen!important}html,body{color-scheme:dark}input,select,textarea{color:#EEF2F8;background:rgba(23,30,48,.6)}</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="/" aria-label="Emergency Fund Aquarium home">
+      <svg width="30" height="30" viewBox="0 0 80 80" aria-hidden="true" focusable="false"><rect width="80" height="80" rx="18" fill="#A9D63A"/><rect x="13" y="15" width="54" height="52" rx="11" fill="#FFFFFF"/><path d="M13 42h54v14a11 11 0 0 1-11 11H24a11 11 0 0 1-11-11V42Z" fill="#5CE1E6"/><path d="M46 53c0 5.2-4.7 8.6-9.9 8.6S26.2 58.2 26.2 53s4.7-8.6 9.9-8.6S46 47.8 46 53Z" fill="#FFFFFF"/><path d="M46 53l8.6-6.2v12.4L46 53Z" fill="#A9D63A"/><circle cx="33" cy="50.5" r="2.2" fill="#EEF2F8"/><circle cx="52" cy="28" r="4.2" fill="#CFF25A"/><circle cx="42" cy="22" r="2.7" fill="#CFF25A"/></svg>
+      <span class="word">Emergency Fund <em>Aquarium</em></span>
+    </a>
+    <a class="cta" href="/">Open the app</a>
+  </div>
+</header>
+
+<main>
+  <h1>How to use <em>Emergency Fund Aquarium</em></h1>
+  <p class="lead">The whole app, explained in plain words. Ten minutes from "what is this" to "I've got it".</p>
+
+  <h2 id="big-picture">The big picture</h2>
+  <p>You set a savings goal. Every deposit you log fills the tank a little more. As the water rises,
+  sea creatures show up and stay.</p>
+  <p>Saving is the least rewarding useful thing you can do. The money leaves, nothing happens, and
+  the payoff is an emergency that might not come for years. This app gives you something to look at
+  in the meantime. The tank is the progress bar, and it's a much better progress bar.</p>
+  <img class="shot" src="/guide-app.png" alt="The Emergency Fund Aquarium app: Puff the pufferfish on the left with the fund at $420 of $1,000, and a tank of clownfish, a blue tang, a jellyfish, a seahorse and starfish" loading="lazy">
+  <p class="cap">The tank is your savings. Everything living in it arrived because you put money in.</p>
+
+  <h2 id="goal">Step one: set your goal</h2>
+  <p>The first thing the app asks for is a <b>goal name</b> and a <b>target amount</b>. "Emergency Fund"
+  and whatever number you're aiming at.</p>
+  <p>If you don't have a number, start with <b>$1,000</b>. It's the standard starter emergency fund and
+  it covers most of the things that actually go wrong: a car repair, a vet visit, a deductible.
+  You can change the target later without losing anything.</p>
+  <div class="callout"><b>Nothing here touches your bank.</b> You type in deposits yourself. There's no
+  bank connection, no card, and the app never asks for one.</div>
+
+  <h2 id="deposits">Step two: log deposits</h2>
+  <p>Go to <b>Add Deposit</b>, put in the amount and the date, and add a note if you want to remember
+  where it came from. Tax refund, bonus, a good sales week.</p>
+  <p>Log the small ones too. $12 counts. The tank doesn't care where the water came from, and neither
+  does an emergency fund.</p>
+  <img class="shot" src="/guide-deposit.png" alt="The Add Deposit tab with amount, date and optional note fields" loading="lazy">
+  <p class="cap">Amount, date, and a note to your future self.</p>
+
+  <h2 id="creatures">How the tank comes alive</h2>
+  <p>Creatures arrive at <b>percentages of your goal</b>, not dollar amounts. So the milestones land in
+  the same places whether you're saving $1,000 or $20,000.</p>
+  <div class="strow"><span class="chip c-sea">5%</span><span>Seaweed. The tank stops looking empty.</span></div>
+  <div class="strow"><span class="chip c-sea">10%</span><span>Your first fish arrives.</span></div>
+  <div class="strow"><span class="chip c-teal">25%</span><span>Coral starts growing. A quarter of the way there.</span></div>
+  <div class="strow"><span class="chip c-teal">50%</span><span>A turtle shows up. Half full.</span></div>
+  <div class="strow"><span class="chip c-gold">75%</span><span>The deep blue is genuinely busy now.</span></div>
+  <div class="strow"><span class="chip c-gold">100%</span><span>Treasure found. Your fund is fully stocked.</span></div>
+  <p>Once a creature arrives it stays. The tank only ever gets fuller as long as you keep depositing.</p>
+
+  <h2 id="tabs">What each tab is for</h2>
+  <ul>
+    <li><b>Aquarium</b> is the tank itself, and where you'll spend your time.</li>
+    <li><b>History</b> is every deposit you've logged.</li>
+    <li><b>Progress</b> is how far along you are and how it's been going.</li>
+    <li><b>Fish-Dex</b> is the collection: every creature you've met, and what's still out there.</li>
+    <li><b>Add Deposit</b> is the form.</li>
+  </ul>
+  <img class="shot" src="/guide-dex.png" alt="The Fish-Dex tab showing creatures you've already met alongside ones still to come" loading="lazy">
+  <p class="cap">The Fish-Dex: what you've met, and what's still waiting further up the tank.</p>
+
+  <h2 id="biomes">Biomes</h2>
+  <p>A biome is what your tank looks like and which creatures live in it. <b>Ocean</b> and <b>Tropical</b>
+  are free. <b>Deep Sea</b>, <b>Lake</b>, <b>Coral Reef</b> and <b>Arctic</b> are part of Pro, and each
+  has its own set of creatures to find.</p>
+
+  <h2 id="first-ten">Your first ten minutes</h2>
+  <ol>
+    <li><b>Set a goal.</b> $1,000 if you're not sure. The number matters less than starting.</li>
+    <li><b>Log what you already have set aside.</b> Even if it's $40. That's your starting water level.</li>
+    <li><b>Look at the tank.</b> Then check the Fish-Dex to see what's coming at the next milestone.</li>
+  </ol>
+
+  <h2 id="pro">What's free and what's Pro</h2>
+  <p>Free is a real savings tracker, not a trial. Pro is part of the hosted version at
+  emergencyfundaquarium.com. A copy someone runs themselves has the free plan only.</p>
+  <div class="tablewrap" tabindex="0" role="region" aria-label="Free versus Pro comparison">
+  <table>
+    <thead><tr><th><span class="vh">Feature</span></th><th>Free</th><th>Pro</th></tr></thead>
+    <tbody>
+      <tr><td>Active savings goals</td><td>1</td><td>Unlimited</td></tr>
+      <tr><td>Deposits</td><td>Unlimited</td><td>Unlimited</td></tr>
+      <tr><td>The tank, creatures, Fish-Dex</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Biomes</td><td>Ocean, Tropical</td><td>Plus Deep Sea, Lake, Coral Reef, Arctic</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 id="faq">Quick answers</h2>
+  <dl class="faq">
+    <dt>Does this connect to my bank?</dt>
+    <dd>No, and it never asks. You log deposits yourself. There's no bank connection and no card.</dd>
+    <dt>What if I have to spend the money?</dt>
+    <dd>That's what it's for. There's no withdrawal entry, so the way to bring the level back down is
+    to delete deposits in History until the total matches what's really there. Then start refilling.
+    Using it in an emergency is the fund working, not the fund failing.</dd>
+    <dt>Do creatures arrive at dollar amounts or percentages?</dt>
+    <dd>Percentages of your goal. A $1,000 goal and a $20,000 goal hit the same milestones at the same
+    points along the way.</dd>
+    <dt>Can I change my target later?</dt>
+    <dd>Yes. Your deposits stay; the percentages just recalculate against the new number.</dd>
+    <dt>Can I see the app tour again?</dt>
+    <dd>Yes. Tap the <b>?</b> button at the top of the app, then <b>Show me around</b>.</dd>
+    <dt>Where do I ask for help?</dt>
+    <dd>The feedback button in the corner of the app goes to the people running this site, if they've turned it on.</dd>
+  </dl>
+
+  <div class="bigcta"><a class="cta" href="/">Open Emergency Fund Aquarium</a></div>
+</main>
+
+<footer class="footer">
+  <div class="in">
+    <div class="legalrow">
+      <a href="/">Home</a>·
+      <a href="/legal/privacy.html">Privacy</a>·
+      <a href="/legal/terms.html">Terms</a>·
+      <a href="/legal/accessibility.html">Accessibility</a>·
+      <a href="/legal/do-not-sell.html">Do Not Sell</a> &middot; <a href="https://github.com/jensoltys/emergencyfundaquarium" target="_blank" rel="noopener noreferrer">Source code</a>
+    </div>
+    <div>Contact <a href="mailto:support@example.com">support@example.com</a> &middot; &copy; <span class="jbi-year">2026</span> YOUR COMPANY NAME &middot; YOUR BUSINESS ADDRESS</div>
+  </div>
+</footer>
+<script src="/footer-year.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: AGPL-3.0-only | Copyright (C) 2026 the Emergency Fund Aquarium authors. See LICENSE. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Page not found &middot; Emergency Fund Aquarium</title>
+<meta name="description" content="That Emergency Fund Aquarium page doesn't exist. Head back to your tank."/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><rect width='80' height='80' rx='18' fill='%23A9D63A'/><rect x='13' y='15' width='54' height='52' rx='11' fill='%23FFFFFF'/><path d='M13 42h54v14a11 11 0 0 1-11 11H24a11 11 0 0 1-11-11V42Z' fill='%235CE1E6'/><path d='M46 53c0 5.2-4.7 8.6-9.9 8.6S26.2 58.2 26.2 53s4.7-8.6 9.9-8.6S46 47.8 46 53Z' fill='%23FFFFFF'/><path d='M46 53l8.6-6.2v12.4L46 53Z' fill='%23A9D63A'/><circle cx='33' cy='50.5' r='2.2' fill='%23EEF2F8'/><circle cx='52' cy='28' r='4.2' fill='%23CFF25A'/><circle cx='42' cy='22' r='2.7' fill='%23CFF25A'/></svg>"/>
+<meta name="robots" content="noindex,follow"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#070A12;--bg2:#0D1220;
+  --teal:#CFF25A;--teal-d:#A9D63A;--teal-t:#DDF78A;
+  --seafoam:#5CE1E6;--coral:#FF8A5C;--cyan:#CFF25A;
+  --text:#EEF2F8;--muted:#9AA3B8;
+  --card:rgba(23,30,48,.55);--card-border:rgba(23,30,48,.7);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+:focus-visible{outline:3px solid var(--teal-d);outline-offset:2px;border-radius:4px}
+html,body{overflow-x:hidden}
+body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);min-height:100vh;padding:2rem 1rem;display:flex;align-items:center;justify-content:center}
+.wrap{max-width:520px;width:100%;margin:0 auto;background:var(--card);border:1px solid var(--card-border);border-radius:18px;padding:2.25rem 1.75rem;backdrop-filter:blur(20px);text-align:center}
+h1{font-family:var(--font-head);font-weight:700;font-size:2rem;color:var(--teal-t);margin:.75rem 0 .5rem}
+p{font-size:.95rem;line-height:1.7;color:var(--text);margin-bottom:.6rem}
+.muted{color:var(--muted);font-size:.85rem}
+a{color:var(--teal-d);text-decoration:underline;text-underline-offset:2px}
+a:hover{color:var(--teal-t)}
+.cta{display:inline-block;margin-top:1.25rem;background:linear-gradient(135deg,var(--teal-d),var(--seafoam));color:var(--on-primary);font-family:var(--font-head);font-size:1rem;text-decoration:none;padding:.75rem 1.5rem;border-radius:13px;box-shadow:0 4px 16px rgba(207,242,90,.3),inset 0 1px 1px rgba(23,30,48,.3)}
+.cta:hover{color:var(--on-primary)}
+.crab{width:clamp(110px,34vw,150px);height:auto;filter:drop-shadow(0 6px 20px rgba(207,242,90,.25))}
+/* ===== Brand lockup =====================================================
+   Mark B (filling tank) + stacked wordmark. Source of
+   truth: brand/preview.html. Geometry is hand-synced into public/404.html,
+   all four public/legal/*.html, and the favicon on every one of them — change
+   one, change them all. Fills are hardcoded hex on purpose: fill="var(--x)"
+   as a presentation attribute is unreliable.
+   Both parents here (.app-title, .auth-logo) use gradient text
+   (background-clip:text + transparent fill), which INHERITS into these spans
+   and paints them invisible — hence the resets on every text span. */
+.efa-brand{display:flex;width:max-content;align-items:center;gap:11px;text-decoration:none;padding:6px;margin:-6px auto 1rem}
+.efa-brand svg{display:block;flex:none}
+.efa-stack{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.efa-kicker{font-family:var(--font-body);font-weight:800;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);-webkit-text-fill-color:currentColor;background:none}
+.efa-word{position:relative;display:inline-block;margin-top:4px;font-family:var(--font-head);font-weight:700;font-size:24px;line-height:1;letter-spacing:.2px;white-space:nowrap;color:var(--teal-d);-webkit-text-fill-color:currentColor;background:none}
+.efa-swoosh{position:absolute;left:0;right:0;width:100%;height:.4em;bottom:-.26em;overflow:visible}
+.efa-brand:hover .efa-word{color:var(--teal-t,#DDF78A)}
+.efa-brand.lg .efa-kicker{font-size:13px}
+.efa-brand.lg .efa-word{font-size:34px}
+.foot{margin-top:1.75rem;font-size:.72rem;color:var(--muted);line-height:1.8}
+.foot a{color:var(--muted)}
+</style>
+<style id="brand-fonts">:root{--font-head:'Bricolage Grotesque','Avenir Next',system-ui,sans-serif;--font-body:'Figtree','Avenir Next',system-ui,sans-serif;--on-primary:#1C2604}button,input,select,textarea{font-family:inherit}.bg-blob{mix-blend-mode:screen!important}html,body{color-scheme:dark}input,select,textarea{color:#EEF2F8;background:rgba(23,30,48,.6)}</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="efa-brand" href="/" aria-label="Emergency Fund Aquarium home"><svg width="30" height="30" viewBox="0 0 80 80" aria-hidden="true" focusable="false"><rect x="6" y="6" width="68" height="68" rx="20" fill="#A9D63A"/><rect x="18" y="20" width="44" height="42" rx="9" fill="#FFFFFF"/><path d="M18 40h44v13a9 9 0 0 1-9 9H27a9 9 0 0 1-9-9V40Z" fill="#5CE1E6"/><path d="M44 50c0 4.2-3.8 7-8 7s-8-2.8-8-7 3.8-7 8-7 8 2.8 8 7Z" fill="#FFFFFF"/><path d="M44 50l7-5v10l-7-5Z" fill="#A9D63A"/><circle cx="34" cy="48" r="1.8" fill="#EEF2F8"/><circle cx="50" cy="30" r="3.4" fill="#CFF25A"/><circle cx="42" cy="25" r="2.2" fill="#CFF25A"/></svg><span class="efa-stack"><span class="efa-kicker">Emergency Fund</span><span class="efa-word">Aquarium<svg class="efa-swoosh" viewBox="0 0 92 14" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M4 9C24 4 60 4 88 8" stroke="#5CE1E6" stroke-width="6" stroke-linecap="round" fill="none"/></svg></span></span></a>
+
+  <svg class="crab" aria-hidden="true" focusable="false" viewBox="0 0 220 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Puff the pufferfish, 55% puffed up"><defs><radialGradient id="pf4B" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#FFE38A"/><stop offset=".6" stop-color="#FFC43D"/><stop offset="1" stop-color="#EE9F14"/></radialGradient><radialGradient id="pf4W" cx=".5" cy=".3" r=".8"><stop offset="0" stop-color="#FFFBEA"/><stop offset="1" stop-color="#FCE7B0"/></radialGradient></defs><ellipse cx="110" cy="176.5" rx="40.400000000000006" ry="5" fill="#000" opacity=".14"/><g class="puff-body"><path class="puff-tail" d="M61.5 104 L33.5 88 Q41.5 104 33.5 120Z" fill="#F2A91F"/><path d="M156.7 117.6 L167.9 115.7 L158.3 109.7Z" fill="#E7A21E"/><path d="M146.2 136.5 L157.1 139.7 L151.1 130.1Z" fill="#E7A21E"/><path d="M128.5 149.0 L136.9 156.6 L135.7 145.3Z" fill="#E7A21E"/><path d="M107.2 152.6 L111.4 163.1 L115.2 152.4Z" fill="#E7A21E"/><path d="M86.4 146.6 L85.7 157.9 L93.7 149.8Z" fill="#E7A21E"/><path d="M91.5 59.0 L83.1 51.4 L84.3 62.7Z" fill="#E7A21E"/><path d="M112.8 55.4 L108.6 44.9 L104.8 55.6Z" fill="#E7A21E"/><path d="M133.6 61.4 L134.3 50.1 L126.3 58.2Z" fill="#E7A21E"/><path d="M149.7 75.9 L155.3 66.0 L144.6 69.8Z" fill="#E7A21E"/><path d="M158.0 95.9 L167.3 89.4 L156.0 88.2Z" fill="#E7A21E"/><circle cx="110" cy="104" r="50.5" fill="url(#pf4B)"/><ellipse cx="114" cy="125.21000000000001" rx="34.34" ry="22.22" fill="url(#pf4W)"/><circle cx="92.325" cy="73.7" r="3.325" fill="#D98C0F" opacity=".55"/><circle cx="108.485" cy="79.7" r="3.325" fill="#D98C0F" opacity=".55"/><circle cx="124.64500000000001" cy="73.7" r="3.325" fill="#D98C0F" opacity=".55"/><ellipse cx="92.325" cy="78.75" rx="14.14" ry="8.08" fill="#fff" opacity=".45" transform="rotate(-25 92.325 78.75)"/><path class="puff-fin" d="M94.85 110.06 q-12 -9 -19 5 q11 -1 19 -5z" fill="#F2A91F" opacity=".9"/><g class="puff-eyes"><circle cx="119.09" cy="97.94" r="10.1" fill="#fff"/><circle cx="121.09" cy="98.94" r="6.262" fill="#1B2440"/><circle cx="118.86800000000001" cy="95.41499999999999" r="2.424" fill="#fff"/><circle cx="123.11" cy="100.16199999999999" r="1.01" fill="#fff"/><circle cx="141.31" cy="96.93" r="9.1" fill="#fff"/><circle cx="143.31" cy="97.93" r="5.6419999999999995" fill="#1B2440"/><circle cx="141.308" cy="94.655" r="2.1839999999999997" fill="#fff"/><circle cx="145.13" cy="98.932" r="0.91" fill="#fff"/></g><ellipse cx="114.04" cy="110.06" rx="6" ry="3.5" fill="#FF8FA3" opacity=".55"/><ellipse cx="150.4" cy="109.05" rx="5" ry="3" fill="#FF8FA3" opacity=".55"/><path d="M123.46000000000001 113.09 Q131.21 120.59 138.96 113.09" fill="none" stroke="#3A1E12" stroke-width="3" stroke-linecap="round"/></g></svg>
+
+  <h1>Nothing swimming here</h1>
+  <p>This page doesn't exist. Puff checked twice.</p>
+  <p class="muted">Your tank and every deposit in it are exactly where you left them.</p>
+  <a class="cta" href="/">Back to my aquarium</a>
+
+  <div class="foot">
+    <a href="/guide">Guide</a> &middot;
+    <a href="/legal/privacy.html">Privacy</a> &middot;
+    <a href="/legal/terms.html">Terms</a> &middot;
+    <a href="/legal/accessibility.html">Accessibility</a> &middot;
+    <a href="/legal/do-not-sell.html">Do Not Sell or Share My Info</a> &middot; <a href="https://github.com/jensoltys/emergencyfundaquarium" target="_blank" rel="noopener noreferrer">Source code</a><br/>
+    Contact <a href="mailto:support@example.com">support@example.com</a> &middot; &copy; <span class="jbi-year">2026</span> YOUR COMPANY NAME &middot; YOUR BUSINESS ADDRESS
+  </div>
+</main>
+<script src="/footer-year.js" defer></script>
+</body>
+</html>
